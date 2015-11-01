@@ -1,44 +1,51 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package GUI;
 
+import Modelo.Pregunta;
 import gestorBD.Controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.HashMap;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
 import jess.JessHelper;
 
-/**
- *
- * @author Alexander
- */
 public class InterfazPreguntas extends javax.swing.JFrame {
 
-    /**
-     * Creates new form NewJFrame
-     */
-    private JessHelper jessHelper;
-    JButton[] buttons = {new JButton(), new JButton(), new JButton(), new JButton(), new JButton()};
-    HashMap<String, Integer> siyno;
-    HashMap<String, Integer> carreras;
-
-    public InterfazPreguntas() {
-        
-        Controlador.obtenerSiguientePregunta();
+    public Pregunta preguntaMostrada;
+    JButton[] botones;
     
+    public InterfazPreguntas() {
+        initComponents();
+        this.addWindowListener(new WindowAdapter() { //Cuando se vaya a cerrar el programa cierra la base de datos
+            @Override
+            public void windowClosing(WindowEvent we) {
+                Controlador.guardarXML();
+            }
+        });
+        pintarPregunta();
     }
 
+    private void pintarPregunta(){
+        preguntaMostrada = Controlador.obtenerSiguientePregunta();
+        labelPregunta.setText(preguntaMostrada.textoParaMostrar);
+        panelRespuestas.removeAll();
+        for(String opcion : preguntaMostrada.opcionesDeRespuesta){
+            JButton boton = new JButton();
+            boton.setText(opcion);
+            boton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    preguntaMostrada.respuesta = opcion.toLowerCase();
+                    Controlador.responderPregunta(preguntaMostrada);
+                    pintarPregunta();
+                }
+            });
+            panelRespuestas.add(boton);
+        }
+        repaint();
+    }
     
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -49,7 +56,7 @@ public class InterfazPreguntas extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabelLogo = new javax.swing.JLabel();
         labelPregunta = new javax.swing.JLabel();
         panelRespuestas = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -62,7 +69,7 @@ public class InterfazPreguntas extends javax.swing.JFrame {
 
         jPanel1.setMaximumSize(null);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/img/logo.png"))); // NOI18N
+        jLabelLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/img/logo.png"))); // NOI18N
 
         labelPregunta.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         labelPregunta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -74,6 +81,11 @@ public class InterfazPreguntas extends javax.swing.JFrame {
         botonAyuda.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
         botonAyuda.setForeground(new java.awt.Color(255, 255, 255));
         botonAyuda.setText("?");
+        botonAyuda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAyudaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -96,7 +108,7 @@ public class InterfazPreguntas extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel1)
+                .addComponent(jLabelLogo)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(labelPregunta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -109,7 +121,7 @@ public class InterfazPreguntas extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1)
+                    .addComponent(jLabelLogo)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -136,10 +148,14 @@ public class InterfazPreguntas extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-   
+
+    private void botonAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAyudaActionPerformed
+        JOptionPane.showMessageDialog(null,preguntaMostrada.textoAyuda,"Ayuda",1);
+    }//GEN-LAST:event_botonAyudaActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAyuda;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabelLogo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel labelPregunta;

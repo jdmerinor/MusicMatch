@@ -162,8 +162,8 @@ public class Login extends javax.swing.JFrame {
         if (textoIngresado.equals("")) {
             JOptionPane.showMessageDialog(null, "Ingrese un nombre de usuario con por lo menos un caracter", "Nombre de usuario no valido", 0);
         } else {
-            Controlador.iniciarSesion(labelNombreUsuario.getText());
             Controlador.inicializarClips();
+            Controlador.iniciarSesion(labelNombreUsuario.getText());
             setVisible(false);
             dispose();
             new InterfazPreguntas().setVisible(true);

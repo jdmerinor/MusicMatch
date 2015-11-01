@@ -6,4 +6,5 @@ public class Pregunta {
     public String[] opcionesDeRespuesta;
     public String prefijoAssertRespuesta;
     public String textoAyuda;
+    public String respuesta;
 }

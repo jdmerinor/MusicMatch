@@ -13,7 +13,7 @@ public class Controlador {
     //Atributos
     private static Rete clips = new Rete(); //Es como la clase patrona como si fuera la consola de CLIPS
     private static Context contexto;        //Es el ambito global de la consola de CLIPS
-
+    public static Usuario esteUsuario;      //Es como la cookie que me permite saber la persona que está logueada en el momento
     //Métodos
     public static LinkedList<Usuario> listaDeUsuarios = new LinkedList();
 
@@ -43,19 +43,27 @@ public class Controlador {
 
     public static void iniciarSesion(String nombreUsuario) {
 
-        Usuario esteUsuario = buscarEsteUsuario(nombreUsuario);
+        esteUsuario = buscarEsteUsuario(nombreUsuario);
         inicializarClips();
         try {
             if (esteUsuario != null) {
                 System.out.println("Hola " + nombreUsuario);
+                for (String esteRetract : esteUsuario.getRetracts()) {
+                    System.out.println("Se va a hacer el retract: " + esteRetract);
+                    clips.executeCommand(esteRetract);
+                }
+
                 for (String esteAssert : esteUsuario.getHechos()) {//Se realizan los asserts de todas las cosas que se conocen del usuario
                     System.out.println("Se va a hacer el assert: " + esteAssert);
                     clips.executeCommand(esteAssert);
                 }
             } else {//
-                Usuario nuevoUsuario = new Usuario(nombreUsuario);
-                listaDeUsuarios.add(nuevoUsuario);
+                esteUsuario = new Usuario(nombreUsuario);
+                listaDeUsuarios.add(esteUsuario);
+
             }
+            clips.executeCommand("(assert (no_pausa))");
+
         } catch (JessException ex) {
             Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -84,17 +92,36 @@ public class Controlador {
             }
             String[] opcionesDeRespuesta = clips.fetch("OPCIONES_DE_RESPUESTA").toString().replace("\"", "").split(",");
             estaPregunta.opcionesDeRespuesta = opcionesDeRespuesta;
-            
-            String prefijo = clips.fetch("NOMBRE_RESPUESTA").toString().replace("\"", "");
 
+            String prefijo = clips.fetch("NOMBRE_RESPUESTA").toString().replace("\"", "");
+            estaPregunta.prefijoAssertRespuesta = prefijo;
+
+            String ayuda = clips.fetch("TEXTO_AYUDA").toString().replace("\"", "");
+            estaPregunta.textoAyuda = ayuda;
+
+            
+            return estaPregunta;
+        } catch (JessException ex) {
+            Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+
+    public static void responderPregunta(Pregunta pregunta) {
+        try {
             String numeroDeHechoPregunta = clips.fetch("NUMERO_FACT_PREGUNTA").toString().replace("<Fact-", "").replace(">", "");
-            clips.executeCommand("(retract " + numeroDeHechoPregunta + ")");
+
+            String retractPreguntaDesactivada = "(retract " + numeroDeHechoPregunta + ")";
+            esteUsuario.retracts.add(retractPreguntaDesactivada);
+            clips.executeCommand(retractPreguntaDesactivada);
+            
+            esteUsuario.hechos.add("(assert (" + pregunta.prefijoAssertRespuesta + pregunta.respuesta + "))");
+            clips.executeCommand("(assert (" + pregunta.prefijoAssertRespuesta + pregunta.respuesta + "))");
             clips.executeCommand("(assert (no_pausa))");
             clips.executeCommand("(facts)");
             clips.run();
         } catch (JessException ex) {
             Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return null;
     }
 }

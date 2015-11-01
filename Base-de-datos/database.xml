@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<java version="1.8.0_51" class="java.beans.XMLDecoder">
+ <object class="java.util.LinkedList">
+  <void method="add">
+   <object class="Modelo.Usuario" id="Usuario0">
+    <void class="Modelo.Usuario" method="getField">
+     <string>nombreUsuario</string>
+     <void method="set">
+      <object idref="Usuario0"/>
+      <string>pachin</string>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>hechos</string>
+     <void method="set">
+      <object idref="Usuario0"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(assert (pachito_hombre_si))</string>
+       </void>
+       <void method="add">
+        <string>(assert (occiental_opcion1))</string>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>retracts</string>
+     <void method="set">
+      <object idref="Usuario0"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(retract 2)</string>
+       </void>
+       <void method="add">
+        <string>(retract 1)</string>
+       </void>
+      </object>
+     </void>
+    </void>
+   </object>
+  </void>
+ </object>
+</java>
