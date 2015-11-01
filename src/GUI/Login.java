@@ -1,23 +1,15 @@
 package GUI;
 
 import gestorBD.Controlador;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JButton;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
-import jess.JessHelper;
-
 
 public class Login extends javax.swing.JFrame {
-
- 
 
     public Login() {
         Controlador.cargarXML();
@@ -29,8 +21,6 @@ public class Login extends javax.swing.JFrame {
             }
         });
     }
-
-   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -155,7 +145,7 @@ public class Login extends javax.swing.JFrame {
 
     private void botonAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAyudaActionPerformed
         //Presenta la ayuda
-        JOptionPane.showMessageDialog(null,"Ingrese su nombre de usuario, si no tiene uno escriba el que desee y se creará un perfil con este nombre de usuario para usted.","Ayuda Login",1);
+        JOptionPane.showMessageDialog(null, "Ingrese su nombre de usuario, si no tiene uno escriba el que desee y se creará un perfil con este nombre de usuario para usted.", "Ayuda Login", 1);
     }//GEN-LAST:event_botonAyudaActionPerformed
 
     private void labelNombreUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_labelNombreUsuarioActionPerformed
@@ -164,26 +154,31 @@ public class Login extends javax.swing.JFrame {
 
     private void iniciarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarSesionActionPerformed
         iniciarSesion();
+
     }//GEN-LAST:event_iniciarSesionActionPerformed
 
-    private void iniciarSesion(){
+    private void iniciarSesion() {
         String textoIngresado = labelNombreUsuario.getText();
-        if (textoIngresado.equals("")){
+        if (textoIngresado.equals("")) {
             JOptionPane.showMessageDialog(null, "Ingrese un nombre de usuario con por lo menos un caracter", "Nombre de usuario no valido", 0);
-        }else{
+        } else {
             Controlador.iniciarSesion(labelNombreUsuario.getText());
+            Controlador.inicializarClips();
+            setVisible(false);
+            dispose();
+            new InterfazPreguntas().setVisible(true);
         }
-        
     }
+
     public static void main(String args[]) {
-        
+
         try {
             //Se cambia el look and feel
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
             Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {

@@ -1,23 +1,32 @@
 package gestorBD;
 
+import Modelo.Pregunta;
 import Modelo.Usuario;
+import java.util.Iterator;
 import java.util.LinkedList;
-import jess.Fact;
-import jess.JessException;
-import jess.Rete;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import jess.*;
 
 public class Controlador {
 
     //Atributos
-
-    private static Rete clips = new Rete();
+    private static Rete clips = new Rete(); //Es como la clase patrona como si fuera la consola de CLIPS
+    private static Context contexto;        //Es el ambito global de la consola de CLIPS
 
     //Métodos
     public static LinkedList<Usuario> listaDeUsuarios = new LinkedList();
 
-    public static void inicializar() throws JessException {
-        clips.reset();
-        clips.batch("SEMusicMatch.clp");
+    public static void inicializarClips() {
+        try {
+            contexto = clips.getGlobalContext();
+            clips.reset();//Es un reset tal cual como en Clips
+            clips.batch("SEMusicMatch.clp");//Es como un load buffer
+            clips.reset();
+            clips.run(); //Corre el CLP
+        } catch (JessException ex) {
+            Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     public static void cargarXML() {
@@ -33,12 +42,59 @@ public class Controlador {
     }
 
     public static void iniciarSesion(String nombreUsuario) {
-        if (listaDeUsuarios.contains(nombreUsuario)) {
-            //TODO REGISTRAR ASSERTS
-        } else {
-            Usuario nuevoUsuario = new Usuario(nombreUsuario);
-            listaDeUsuarios.add(nuevoUsuario);
+
+        Usuario esteUsuario = buscarEsteUsuario(nombreUsuario);
+        inicializarClips();
+        try {
+            if (esteUsuario != null) {
+                System.out.println("Hola " + nombreUsuario);
+                for (String esteAssert : esteUsuario.getHechos()) {//Se realizan los asserts de todas las cosas que se conocen del usuario
+                    System.out.println("Se va a hacer el assert: " + esteAssert);
+                    clips.executeCommand(esteAssert);
+                }
+            } else {//
+                Usuario nuevoUsuario = new Usuario(nombreUsuario);
+                listaDeUsuarios.add(nuevoUsuario);
+            }
+        } catch (JessException ex) {
+            Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
+    public static Usuario buscarEsteUsuario(String nombreUsuario) {
+        for (Usuario esteUsuario : listaDeUsuarios) { //Se recorre la lista de usuarios buscando el que le pasaron
+            if (esteUsuario.nombreUsuario.equalsIgnoreCase(nombreUsuario)) {
+                return esteUsuario;
+            }
+        }
+
+        return null;
+    }
+
+    public static Pregunta obtenerSiguientePregunta() {
+        Pregunta estaPregunta = new Pregunta();
+        try {
+            clips.run();
+            Value valorDelTextoDeLaPregunta = clips.fetch("TEXTO_PREGUNTA");
+            if (valorDelTextoDeLaPregunta == null) {
+                return null;
+            } else {
+                String textoDeLaPregunta = valorDelTextoDeLaPregunta.toString().replace("\"", "");
+                estaPregunta.textoParaMostrar = textoDeLaPregunta;
+            }
+            String[] opcionesDeRespuesta = clips.fetch("OPCIONES_DE_RESPUESTA").toString().replace("\"", "").split(",");
+            estaPregunta.opcionesDeRespuesta = opcionesDeRespuesta;
+            
+            String prefijo = clips.fetch("NOMBRE_RESPUESTA").toString().replace("\"", "");
+
+            String numeroDeHechoPregunta = clips.fetch("NUMERO_FACT_PREGUNTA").toString().replace("<Fact-", "").replace(">", "");
+            clips.executeCommand("(retract " + numeroDeHechoPregunta + ")");
+            clips.executeCommand("(assert (no_pausa))");
+            clips.executeCommand("(facts)");
+            clips.run();
+        } catch (JessException ex) {
+            Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
 }

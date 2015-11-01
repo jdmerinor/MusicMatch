@@ -5,6 +5,7 @@
  */
 package GUI;
 
+import gestorBD.Controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
@@ -20,7 +21,7 @@ import jess.JessHelper;
  *
  * @author Alexander
  */
-public class Interfaz extends javax.swing.JFrame {
+public class InterfazPreguntas extends javax.swing.JFrame {
 
     /**
      * Creates new form NewJFrame
@@ -30,100 +31,13 @@ public class Interfaz extends javax.swing.JFrame {
     HashMap<String, Integer> siyno;
     HashMap<String, Integer> carreras;
 
-    public Interfaz() {
-        siyno = new HashMap<>();
-        siyno.put("Si", 1);
-        siyno.put("No", 0);
-        carreras = new HashMap<>();
-        carreras.put("Carrera Profesional", 1);
-        carreras.put("Técnico tecnologo en áreas administrativas o afines", 2);
-        carreras.put("Logistica o servicio al cliente", 3);
-        carreras.put("Tecnico en producción de TV", 4);
-        carreras.put("Otra", 5);
-        jessHelper = new JessHelper();
-        initComponents();
-        for (JButton button : buttons) {
-            button.setVisible(false);
-            panelRespuestas.add(button);
-        }
-
-        pintarSiguientePregunta("Actualmente estudia?", siyno, "En el parque explora se busca apoyar a los estudiantes de educación superior por lo que hay diversas vacantes paa ellos");
+    public InterfazPreguntas() {
+        
+        Controlador.obtenerSiguientePregunta();
+    
     }
 
-    public void pintarSiguientePregunta(String pregunta, HashMap<String, Integer> posibilidades, String ayuda) {
-        labelPregunta.setText(pregunta);
-        int i = 0;
-        for (ActionListener c : botonAyuda.getActionListeners()) {
-            botonAyuda.removeActionListener(c);
-        }
-        botonAyuda.addActionListener(new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null, ayuda);
-            }
-        });
-        for (JButton button : buttons) {
-            button.setVisible(false);
-            for (ActionListener c : button.getActionListeners()) {
-                button.removeActionListener(c);
-            }
-        }
-        for (String respuesta : posibilidades.keySet()) {
-            final int respuestaBoton = posibilidades.get(respuesta);
-            buttons[i].setText(respuesta);
-            buttons[i].setVisible(true);
-            buttons[i].addActionListener(new ActionListener() {
-
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    String slot = jessHelper.getSiguientePregunta();
-                    String clave;
-                    if (slot == null) {
-                        slot = "estudia";
-                        jessHelper.ingresarRespuesta(slot, respuestaBoton);
-                        clave = jessHelper.getSiguientePregunta();
-                        clave = clave.substring(1);
-                        System.out.println(clave);
-                        if ("estudia".equals(slot) && respuestaBoton == 1) {
-                            pintarSiguientePregunta(JessHelper.preguntas.get("?" + clave), carreras, JessHelper.ayudas.get("?" + clave));
-                        } else {
-                            pintarSiguientePregunta(JessHelper.preguntas.get("?" + clave), siyno, JessHelper.ayudas.get("?" + clave));
-                        }
-                    } else {
-                        slot = slot.substring(1);
-
-//                        System.out.println("Respuesta al momento >>>>>>><" + respuestaCLP);
-//                        System.out.println("Valor que ingreso el usuario =>>>>>>>>" + respuestaBoton);
-//                        System.out.println(">>>>>>>>>" + slot);
-                        jessHelper.ingresarRespuesta(slot, respuestaBoton);
-                        clave = jessHelper.getSiguientePregunta();
-                        clave = clave.substring(1);
-                        String respuestaCLP = jessHelper.getRespuesta();
-
-                        if (respuestaCLP != null) {
-                            if (respuestaCLP.equals("LD")) {
-                                dispose();
-                                new InterfazLogica().setVisible(true);
-                            } else {
-                                //Enviar a otra interfaz
-                                System.out.println("Hay respuesta!! " + respuestaCLP);
-                                setVisible(false);
-                                dispose();
-                                InterfazRes interfazRespuesta = new InterfazRes(respuestaCLP);
-
-                                interfazRespuesta.setVisible(true);
-                            }
-                        } else {
-                            pintarSiguientePregunta(JessHelper.preguntas.get("?" + clave), siyno, JessHelper.ayudas.get("?" + clave));
-                        }
-                    }
-
-                }
-            });
-            i++;
-        }
-    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -144,7 +58,6 @@ public class Interfaz extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("ExploraEs");
         setBackground(new java.awt.Color(0, 0, 0));
-        setMaximumSize(null);
         setResizable(false);
 
         jPanel1.setMaximumSize(null);
@@ -223,28 +136,7 @@ public class Interfaz extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        
-        try {
-            //Se cambia el look and feel
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException ex) {
-            Logger.getLogger(Interfaz.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Interfaz().setVisible(true);
-            }
-        });
-    }
-
+   
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAyuda;
     private javax.swing.JLabel jLabel1;
