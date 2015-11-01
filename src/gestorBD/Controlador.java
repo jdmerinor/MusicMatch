@@ -14,8 +14,10 @@ public class Controlador {
     private static Rete clips = new Rete(); //Es como la clase patrona como si fuera la consola de CLIPS
     private static Context contexto;        //Es el ambito global de la consola de CLIPS
     public static Usuario esteUsuario;      //Es como la cookie que me permite saber la persona que está logueada en el momento
-    //Métodos
+    public static String respuesta = "No se encontró ninguna recomendación para usted.";
+//Métodos
     public static LinkedList<Usuario> listaDeUsuarios = new LinkedList();
+    
 
     public static void inicializarClips() {
         try {
@@ -83,39 +85,65 @@ public class Controlador {
         Pregunta estaPregunta = new Pregunta();
         try {
             clips.run();
-            Value valorDelTextoDeLaPregunta = clips.fetch("TEXTO_PREGUNTA");
-            if (valorDelTextoDeLaPregunta == null) {
+
+            Value valorRespuesta = clips.fetch("RESPUESTA");
+            if (valorRespuesta == null) {//Si no hubo valor de respuesta, sigo preguntando
+                Value valorDelTextoDeLaPregunta = clips.fetch("TEXTO_PREGUNTA");
+                clips.store("TEXTO_PREGUNTA", null);
+                if (valorDelTextoDeLaPregunta == null) {
+                    return null;
+                } else {
+                    String textoDeLaPregunta = valorDelTextoDeLaPregunta.toString().replace("\"", "");
+                    estaPregunta.textoParaMostrar = textoDeLaPregunta;
+                }
+                String[] opcionesDeRespuesta = clips.fetch("OPCIONES_DE_RESPUESTA").toString().replace("\"", "").split(",");
+                estaPregunta.opcionesDeRespuesta = opcionesDeRespuesta;
+
+                String prefijo = clips.fetch("NOMBRE_RESPUESTA").toString().replace("\"", "");
+                estaPregunta.prefijoAssertRespuesta = prefijo;
+
+                String ayuda = clips.fetch("TEXTO_AYUDA").toString().replace("\"", "");
+                estaPregunta.textoAyuda = ayuda;
+                
+                String tipoPregunta = clips.fetch("TIPO_PREGUNTA").toString().replace("\"", "");
+                estaPregunta.tipoDePregunta = tipoPregunta;
+
+                return estaPregunta;
+            }else{//Si ya hay una respuesta
+                respuesta = valorRespuesta.toString().replace("\"", "");
                 return null;
-            } else {
-                String textoDeLaPregunta = valorDelTextoDeLaPregunta.toString().replace("\"", "");
-                estaPregunta.textoParaMostrar = textoDeLaPregunta;
             }
-            String[] opcionesDeRespuesta = clips.fetch("OPCIONES_DE_RESPUESTA").toString().replace("\"", "").split(",");
-            estaPregunta.opcionesDeRespuesta = opcionesDeRespuesta;
-
-            String prefijo = clips.fetch("NOMBRE_RESPUESTA").toString().replace("\"", "");
-            estaPregunta.prefijoAssertRespuesta = prefijo;
-
-            String ayuda = clips.fetch("TEXTO_AYUDA").toString().replace("\"", "");
-            estaPregunta.textoAyuda = ayuda;
-
-            
-            return estaPregunta;
         } catch (JessException ex) {
             Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
         }
         return null;
     }
 
-    public static void responderPregunta(Pregunta pregunta) {
+    public static void responderPreguntaDePerfil(Pregunta pregunta) {
         try {
             String numeroDeHechoPregunta = clips.fetch("NUMERO_FACT_PREGUNTA").toString().replace("<Fact-", "").replace(">", "");
 
             String retractPreguntaDesactivada = "(retract " + numeroDeHechoPregunta + ")";
             esteUsuario.retracts.add(retractPreguntaDesactivada);
             clips.executeCommand(retractPreguntaDesactivada);
-            
+
             esteUsuario.hechos.add("(assert (" + pregunta.prefijoAssertRespuesta + pregunta.respuesta + "))");
+            clips.executeCommand("(assert (" + pregunta.prefijoAssertRespuesta + pregunta.respuesta + "))");
+            clips.executeCommand("(assert (no_pausa))");
+            clips.executeCommand("(facts)");
+            clips.run();
+        } catch (JessException ex) {
+            Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public static void responderPreguntaDeMomento(Pregunta pregunta) {
+        try {
+            String numeroDeHechoPregunta = clips.fetch("NUMERO_FACT_PREGUNTA").toString().replace("<Fact-", "").replace(">", "");
+
+            String retractPreguntaDesactivada = "(retract " + numeroDeHechoPregunta + ")";
+            clips.executeCommand(retractPreguntaDesactivada);
+
             clips.executeCommand("(assert (" + pregunta.prefijoAssertRespuesta + pregunta.respuesta + "))");
             clips.executeCommand("(assert (no_pausa))");
             clips.executeCommand("(facts)");

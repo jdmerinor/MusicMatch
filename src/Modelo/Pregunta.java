@@ -7,4 +7,5 @@ public class Pregunta {
     public String prefijoAssertRespuesta;
     public String textoAyuda;
     public String respuesta;
+    public String tipoDePregunta;
 }

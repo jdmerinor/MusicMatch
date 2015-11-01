@@ -8,14 +8,13 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
-import jess.JessHelper;
 
-public class InterfazPreguntas extends javax.swing.JFrame {
+public class InterfazRespuesta extends javax.swing.JFrame {
 
     public Pregunta preguntaMostrada;
     JButton[] botones;
 
-    public InterfazPreguntas() {
+    public InterfazRespuesta() {
         initComponents();
         this.addWindowListener(new WindowAdapter() { //Cuando se vaya a cerrar el programa cierra la base de datos
             @Override
@@ -23,40 +22,11 @@ public class InterfazPreguntas extends javax.swing.JFrame {
                 Controlador.guardarXML();
             }
         });
-        pintarPregunta();
+        labelRespuesta.setText(Controlador.respuesta);
+        repaint();
     }
 
-    private void pintarPregunta() {
-        preguntaMostrada = Controlador.obtenerSiguientePregunta();
-        if (preguntaMostrada != null) {
-            labelPregunta.setText(preguntaMostrada.textoParaMostrar);
-            panelRespuestas.removeAll();
-            for (String opcion : preguntaMostrada.opcionesDeRespuesta) {
-                JButton boton = new JButton();
-                boton.setText(opcion);
-                boton.addActionListener(new ActionListener() {
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        preguntaMostrada.respuesta = opcion.toLowerCase();
-                        if (preguntaMostrada.tipoDePregunta.equals("perfil")) {
-                            Controlador.responderPreguntaDePerfil(preguntaMostrada);
-                        } else if (preguntaMostrada.tipoDePregunta.equals("momento")) {
-                            Controlador.responderPreguntaDeMomento(preguntaMostrada);
-                        }
-
-                        pintarPregunta();
-                    }
-                });
-                panelRespuestas.add(boton);
-            }
-            repaint();
-        } else {//Si no llega ninguna pregunta
-            //Ir a la interfaz de resultado
-            setVisible(false);
-            dispose();
-            new InterfazRespuesta().setVisible(true);
-        }
-    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -69,7 +39,7 @@ public class InterfazPreguntas extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabelLogo = new javax.swing.JLabel();
-        labelPregunta = new javax.swing.JLabel();
+        labelRespuesta = new javax.swing.JLabel();
         panelRespuestas = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         botonAyuda = new javax.swing.JButton();
@@ -83,9 +53,9 @@ public class InterfazPreguntas extends javax.swing.JFrame {
 
         jLabelLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/img/logo.png"))); // NOI18N
 
-        labelPregunta.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        labelPregunta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelPregunta.setText("Pregunta: ");
+        labelRespuesta.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        labelRespuesta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelRespuesta.setText("Respuesta:");
 
         panelRespuestas.setLayout(new java.awt.GridLayout(3, 2, 1, 2));
 
@@ -123,7 +93,7 @@ public class InterfazPreguntas extends javax.swing.JFrame {
                 .addComponent(jLabelLogo)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(labelPregunta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(labelRespuesta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap(35, Short.MAX_VALUE)
                 .addComponent(panelRespuestas, javax.swing.GroupLayout.PREFERRED_SIZE, 589, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -138,7 +108,7 @@ public class InterfazPreguntas extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
-                .addComponent(labelPregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(labelRespuesta, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(panelRespuestas, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -170,7 +140,7 @@ public class InterfazPreguntas extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelLogo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JLabel labelPregunta;
+    private javax.swing.JLabel labelRespuesta;
     private javax.swing.JPanel panelRespuestas;
     // End of variables declaration//GEN-END:variables
 }
