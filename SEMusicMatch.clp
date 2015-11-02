@@ -36,6 +36,9 @@
 		(retract ?np)
 )
 
+
+
+
 (defrule cancion1
 	(declare (salience 3001))
 	?np <- (no_pausa)
@@ -43,8 +46,7 @@
 	(pachito_hombre_si)
 	(occiental_oriental)
 =>
-		(store NOMBRE_RESPUESTA "cancion1_")
 		(store RESPUESTA "Hombre tu cancion perfecta es pachitosfera")
-		(store NUMERO_FACT_PREGUNTA ?x)
+		(store NUMERO_FACT_CANCION ?x)
 		(retract ?np)
 )

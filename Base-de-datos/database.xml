@@ -7,7 +7,7 @@
      <string>nombreUsuario</string>
      <void method="set">
       <object idref="Usuario0"/>
-      <string>pachito</string>
+      <string>pachitu</string>
      </void>
     </void>
     <void class="Modelo.Usuario" method="getField">
@@ -28,6 +28,9 @@
       <object class="java.util.LinkedList">
        <void method="add">
         <string>(retract 1)</string>
+       </void>
+       <void method="add">
+        <string>(retract 3)</string>
        </void>
       </object>
      </void>
@@ -40,7 +43,7 @@
      <string>nombreUsuario</string>
      <void method="set">
       <object idref="Usuario1"/>
-      <string>pachin</string>
+      <string>pu</string>
      </void>
     </void>
     <void class="Modelo.Usuario" method="getField">
@@ -61,6 +64,9 @@
       <object class="java.util.LinkedList">
        <void method="add">
         <string>(retract 1)</string>
+       </void>
+       <void method="add">
+        <string>(retract 3)</string>
        </void>
       </object>
      </void>

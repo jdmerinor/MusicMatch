@@ -1,6 +1,7 @@
 package gestorBD;
 
 import Modelo.Pregunta;
+import Modelo.Recomendacion;
 import Modelo.Usuario;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -14,7 +15,8 @@ public class Controlador {
     private static Rete clips = new Rete(); //Es como la clase patrona como si fuera la consola de CLIPS
     private static Context contexto;        //Es el ambito global de la consola de CLIPS
     public static Usuario esteUsuario;      //Es como la cookie que me permite saber la persona que está logueada en el momento
-    public static String respuesta = "No se encontró ninguna recomendación para usted.";
+    
+    public static Recomendacion respuesta;
 //Métodos
     public static LinkedList<Usuario> listaDeUsuarios = new LinkedList();
     
@@ -109,8 +111,9 @@ public class Controlador {
                 estaPregunta.tipoDePregunta = tipoPregunta;
 
                 return estaPregunta;
-            }else{//Si ya hay una respuesta
-                respuesta = valorRespuesta.toString().replace("\"", "");
+            }else{//Si ya hay una cancion
+                respuesta.cancion = valorRespuesta.toString().replace("\"", "");
+                respuesta.posicionFactDesactivado = clips.fetch("NUMERO_FACT_CANCION").toString().replace("<Fact-", "").replace(">", "");
                 return null;
             }
         } catch (JessException ex) {
@@ -150,6 +153,12 @@ public class Controlador {
             clips.run();
         } catch (JessException ex) {
             Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    public static void guardarCalificacion() {
+        if(Recomendacion.calificacion < 2.5){ //No volver a recomendar
+            esteUsuario.retracts.add("(retract "+ Recomendacion.posicionFactDesactivado +")");
         }
     }
 }

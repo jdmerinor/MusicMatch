@@ -1,9 +1,8 @@
 package GUI;
 
 import Modelo.Pregunta;
+import Modelo.Recomendacion;
 import gestorBD.Controlador;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.JButton;
@@ -22,7 +21,10 @@ public class InterfazRespuesta extends javax.swing.JFrame {
                 Controlador.guardarXML();
             }
         });
-        labelRespuesta.setText(Controlador.respuesta);
+        labelRespuesta.setText(Recomendacion.cancion);
+        if(Recomendacion.cancion.equals("No se encontró ninguna recomendación para usted.")){
+        botonEvaluar.setVisible(false);
+        }
         repaint();
     }
 
@@ -41,6 +43,7 @@ public class InterfazRespuesta extends javax.swing.JFrame {
         jLabelLogo = new javax.swing.JLabel();
         labelRespuesta = new javax.swing.JLabel();
         panelRespuestas = new javax.swing.JPanel();
+        botonEvaluar = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         botonAyuda = new javax.swing.JButton();
 
@@ -58,6 +61,14 @@ public class InterfazRespuesta extends javax.swing.JFrame {
         labelRespuesta.setText("Respuesta:");
 
         panelRespuestas.setLayout(new java.awt.GridLayout(3, 2, 1, 2));
+
+        botonEvaluar.setText("Evaluar la recomendación");
+        botonEvaluar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEvaluarActionPerformed(evt);
+            }
+        });
+        panelRespuestas.add(botonEvaluar);
 
         botonAyuda.setBackground(new java.awt.Color(253, 72, 57));
         botonAyuda.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -132,11 +143,17 @@ public class InterfazRespuesta extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonAyudaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAyudaActionPerformed
-        JOptionPane.showMessageDialog(null, preguntaMostrada.textoAyuda, "Ayuda", 1);
+        JOptionPane.showMessageDialog(null, "Esta es la recomendación que ha realizado el sistema, por favor proceda a realizar la calificación de esta", "Ayuda", 1);
     }//GEN-LAST:event_botonAyudaActionPerformed
+
+    private void botonEvaluarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEvaluarActionPerformed
+        //TODO si nico es un vago disposiamos
+        new InterfazLogica().setVisible(true);
+    }//GEN-LAST:event_botonEvaluarActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAyuda;
+    private javax.swing.JButton botonEvaluar;
     private javax.swing.JLabel jLabelLogo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;

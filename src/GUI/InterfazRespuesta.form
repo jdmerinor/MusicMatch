@@ -108,6 +108,16 @@
             <Property name="rows" type="int" value="3"/>
             <Property name="verticalGap" type="int" value="2"/>
           </Layout>
+          <SubComponents>
+            <Component class="javax.swing.JButton" name="botonEvaluar">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Evaluar la recomendaci&#xf3;n"/>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonEvaluarActionPerformed"/>
+              </Events>
+            </Component>
+          </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel3">
 

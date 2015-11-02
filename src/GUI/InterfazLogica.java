@@ -1,82 +1,22 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package GUI;
 
-import java.util.HashMap;
-import javax.swing.JOptionPane;
-import javax.swing.JSlider;
-import javax.swing.event.ChangeEvent;
-import javax.swing.event.ChangeListener;
-import LD.LogicaDifusa;
+import LogicaDifusa.LogicaDifusa;
+import Modelo.Recomendacion;
+import gestorBD.Controlador;
 
-/**
- *
- * @author Alexander
- */
+
 public class InterfazLogica extends javax.swing.JFrame {
-    private LogicaDifusa ld;
-    /**
-     * Creates new form InterfazLogica
-     */
+    
     public InterfazLogica() {
-        ld = new LogicaDifusa();
         initComponents();
-        jSlider1.addChangeListener(new ChangeListener() {
-
-            @Override
-            public void stateChanged(ChangeEvent e) {
-                labelInfo.setText(((JSlider) e.getSource()).getValue()+"");
-            }
-        });
-        jSlider1.setValue(1);
         
-        jSlider2.addChangeListener(new ChangeListener() {
-
-            @Override
-            public void stateChanged(ChangeEvent e) {
-                labelInfo1.setText(((JSlider) e.getSource()).getValue()+"");
-            }
-        });
-        jSlider2.setValue(1);
+        sliderRitmo.setValue(5);
+        sliderLetra.setValue(5);
+        sliderMomento.setValue(5);
+        repaint();
         
-        jSlider3.addChangeListener(new ChangeListener() {
-
-            @Override
-            public void stateChanged(ChangeEvent e) {
-                labelInfo2.setText(((JSlider) e.getSource()).getValue()+"");
-            }
-        });
-        jSlider3.setValue(1);
         
-        jSlider4.addChangeListener(new ChangeListener() {
-
-            @Override
-            public void stateChanged(ChangeEvent e) {
-                labelInfo5.setText(((JSlider) e.getSource()).getValue()+"");
-            }
-        });
-        jSlider4.setValue(1);
-        
-        jSlider5.addChangeListener(new ChangeListener() {
-
-            @Override
-            public void stateChanged(ChangeEvent e) {
-                labelInfo3.setText(((JSlider) e.getSource()).getValue()+"");
-            }
-        });
-        jSlider5.setValue(1);
-        
-        jSlider6.addChangeListener(new ChangeListener() {
-
-            @Override
-            public void stateChanged(ChangeEvent e) {
-                labelInfo4.setText(((JSlider) e.getSource()).getValue()+"");
-            }
-        });
-        jSlider6.setValue(1);
     }
 
     /**
@@ -89,138 +29,67 @@ public class InterfazLogica extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jSlider1 = new javax.swing.JSlider();
-        labelInfo = new javax.swing.JLabel();
+        sliderRitmo = new javax.swing.JSlider();
         jPanel10 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
-        jSlider2 = new javax.swing.JSlider();
-        labelInfo1 = new javax.swing.JLabel();
+        sliderLetra = new javax.swing.JSlider();
         jPanel11 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        jSlider3 = new javax.swing.JSlider();
-        labelInfo2 = new javax.swing.JLabel();
-        jPanel12 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        jSlider4 = new javax.swing.JSlider();
-        labelInfo5 = new javax.swing.JLabel();
-        jPanel13 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
-        jSlider5 = new javax.swing.JSlider();
-        labelInfo3 = new javax.swing.JLabel();
-        jPanel14 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jSlider6 = new javax.swing.JSlider();
-        labelInfo4 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        sliderMomento = new javax.swing.JSlider();
+        botonCalificar = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/img/logo.gif"))); // NOI18N
-
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Lógica difusa"));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Calificación de la recomendación"));
         jPanel2.setLayout(new java.awt.GridLayout(6, 1, 0, 3));
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
-        jLabel2.setText("¿Cuántas horas disponibles por semana?");
+        jLabel2.setText("¿Qué tal le pareció el ritmo de la canción?");
         jPanel3.add(jLabel2);
 
-        jSlider1.setMajorTickSpacing(5);
-        jSlider1.setMaximum(50);
-        jSlider1.setPaintLabels(true);
-        jSlider1.setPaintTicks(true);
-        jPanel3.add(jSlider1);
-        jPanel3.add(labelInfo);
+        sliderRitmo.setMajorTickSpacing(1);
+        sliderRitmo.setMaximum(10);
+        sliderRitmo.setMinorTickSpacing(1);
+        sliderRitmo.setPaintLabels(true);
+        sliderRitmo.setPaintTicks(true);
+        jPanel3.add(sliderRitmo);
 
         jPanel2.add(jPanel3);
 
-        jPanel10.setBackground(new java.awt.Color(255, 255, 255));
         jPanel10.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
-        jLabel3.setText("De 1 a 10, ¿qué tan extrovertido es?");
+        jLabel3.setText("¿Qué tal le pareció la letra de la canción?");
         jPanel10.add(jLabel3);
 
-        jSlider2.setMajorTickSpacing(5);
-        jSlider2.setMaximum(10);
-        jSlider2.setPaintLabels(true);
-        jSlider2.setPaintTicks(true);
-        jPanel10.add(jSlider2);
-        jPanel10.add(labelInfo1);
+        sliderLetra.setMajorTickSpacing(1);
+        sliderLetra.setMaximum(10);
+        sliderLetra.setPaintLabels(true);
+        sliderLetra.setPaintTicks(true);
+        jPanel10.add(sliderLetra);
 
         jPanel2.add(jPanel10);
 
-        jPanel11.setBackground(new java.awt.Color(255, 255, 255));
         jPanel11.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
 
-        jLabel4.setText("¿Cuántos días esta dipuesto a viajar por semana a pueblos de Antioquia?");
+        jLabel4.setText("¿Qué tan adecuada fue la recomendación de esta canción para el momento?");
         jPanel11.add(jLabel4);
 
-        jSlider3.setMajorTickSpacing(1);
-        jSlider3.setMaximum(7);
-        jSlider3.setPaintLabels(true);
-        jSlider3.setPaintTicks(true);
-        jPanel11.add(jSlider3);
-        jPanel11.add(labelInfo2);
+        sliderMomento.setMajorTickSpacing(1);
+        sliderMomento.setMaximum(10);
+        sliderMomento.setPaintLabels(true);
+        sliderMomento.setPaintTicks(true);
+        jPanel11.add(sliderMomento);
 
         jPanel2.add(jPanel11);
 
-        jPanel12.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel12.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
-
-        jLabel5.setText("de a 1 a 10, ¿qué tanto le gusta trabajar con niños?");
-        jPanel12.add(jLabel5);
-
-        jSlider4.setMajorTickSpacing(5);
-        jSlider4.setMaximum(10);
-        jSlider4.setPaintLabels(true);
-        jSlider4.setPaintTicks(true);
-        jPanel12.add(jSlider4);
-        jPanel12.add(labelInfo5);
-
-        jPanel2.add(jPanel12);
-
-        jPanel13.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel13.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
-
-        jLabel6.setText("de 1 a 10, ¿Cómo es su nivel de Robótica?");
-        jPanel13.add(jLabel6);
-
-        jSlider5.setMajorTickSpacing(5);
-        jSlider5.setMaximum(10);
-        jSlider5.setPaintLabels(true);
-        jSlider5.setPaintTicks(true);
-        jPanel13.add(jSlider5);
-        jPanel13.add(labelInfo3);
-
-        jPanel2.add(jPanel13);
-
-        jPanel14.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel14.setLayout(new java.awt.FlowLayout(java.awt.FlowLayout.RIGHT));
-
-        jLabel7.setText("de 1 a 10, ¿Cómo es su nivel de informática?");
-        jPanel14.add(jLabel7);
-
-        jSlider6.setMajorTickSpacing(5);
-        jSlider6.setMaximum(10);
-        jSlider6.setPaintLabels(true);
-        jSlider6.setPaintTicks(true);
-        jPanel14.add(jSlider6);
-        jPanel14.add(labelInfo4);
-
-        jPanel2.add(jPanel14);
-
-        jButton1.setText("Enviar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        botonCalificar.setText("Enviar calificación");
+        botonCalificar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                botonCalificarActionPerformed(evt);
             }
         });
 
@@ -229,27 +98,26 @@ public class InterfazLogica extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 760, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(205, 205, 205))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 770, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(286, 286, 286)
+                        .addComponent(botonCalificar, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 379, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(botonCalificar, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(13, Short.MAX_VALUE))
         );
+
+        jPanel2.getAccessibleContext().setAccessibleName("Evaluación de la recomendación");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -270,57 +138,33 @@ public class InterfazLogica extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        double variables[] = new double[6];
-        variables[0] = jSlider1.getValue();
-        variables[1] = jSlider2.getValue();
-        variables[2] = jSlider3.getValue();
-        variables[3] = jSlider4.getValue();
-        variables[4] = jSlider5.getValue();
-        variables[5] = jSlider6.getValue();
-        ld.llenarVariables(variables);
-        HashMap<String,String> obtenerRespuestas = ld.obtenerRespuestas();
-        if(obtenerRespuestas.isEmpty()){
-            JOptionPane.showMessageDialog(null, "En este momento no hay bacantes para aplicar su conocimiento para profesional, intentalo de nuevo más tarde");
-        }else{
-            String cargos = "Estos son los cargos que usted puede aspirar:\n";
-            for(String cargo: obtenerRespuestas.keySet()){
-                cargos += cargo + " " + obtenerRespuestas.get(cargo) + "\n";
-            }
-            JOptionPane.showMessageDialog(null, cargos);
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void botonCalificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCalificarActionPerformed
+        int ritmo = sliderRitmo.getValue();
+        int letra = sliderLetra.getValue();
+        int momento = sliderMomento.getValue();
+
+        Recomendacion.calificacion = LogicaDifusa.calcularCalificacionRecomendacion(ritmo, letra, momento);
+        
+        Controlador.guardarCalificacion();
+        dispose();
+        //TODO si Nico es un vago se debe guardar el XML al cerrar esta ventana
+        
+    }//GEN-LAST:event_botonCalificarActionPerformed
 
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton botonCalificar;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
-    private javax.swing.JPanel jPanel12;
-    private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
-    private javax.swing.JSlider jSlider1;
-    private javax.swing.JSlider jSlider2;
-    private javax.swing.JSlider jSlider3;
-    private javax.swing.JSlider jSlider4;
-    private javax.swing.JSlider jSlider5;
-    private javax.swing.JSlider jSlider6;
-    private javax.swing.JLabel labelInfo;
-    private javax.swing.JLabel labelInfo1;
-    private javax.swing.JLabel labelInfo2;
-    private javax.swing.JLabel labelInfo3;
-    private javax.swing.JLabel labelInfo4;
-    private javax.swing.JLabel labelInfo5;
+    private javax.swing.JSlider sliderLetra;
+    private javax.swing.JSlider sliderMomento;
+    private javax.swing.JSlider sliderRitmo;
     // End of variables declaration//GEN-END:variables
 }
