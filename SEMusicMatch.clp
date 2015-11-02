@@ -584,6 +584,154 @@
 			(cancion520_desactivada)
 			(cancion521_desactivada)
 			(cancion522_desactivada)
+			;******New age
+			(cancion523_desactivada)
+			(cancion524_desactivada)
+			(cancion525_desactivada)
+			(cancion526_desactivada)
+			(cancion527_desactivada)
+			(cancion528_desactivada)
+			(cancion529_desactivada)
+			(cancion530_desactivada)
+			(cancion531_desactivada)
+			(cancion532_desactivada)
+			(cancion533_desactivada)
+			(cancion534_desactivada)
+			(cancion535_desactivada)
+			(cancion536_desactivada)
+			(cancion537_desactivada)
+			(cancion538_desactivada)
+			(cancion539_desactivada)
+			(cancion540_desactivada)
+			(cancion541_desactivada)
+			(cancion542_desactivada)
+			(cancion543_desactivada)
+			;******MERENGUE
+			(cancion544_desactivada)
+			(cancion545_desactivada)
+			(cancion546_desactivada)
+			(cancion547_desactivada)
+			(cancion548_desactivada)
+			(cancion549_desactivada)
+			(cancion550_desactivada)
+			(cancion551_desactivada)
+			(cancion552_desactivada)
+			(cancion553_desactivada)
+			(cancion554_desactivada)
+			(cancion555_desactivada)
+			(cancion556_desactivada)
+			(cancion557_desactivada)
+			(cancion558_desactivada)
+			(cancion559_desactivada)
+			(cancion560_desactivada)
+			(cancion561_desactivada)
+			(cancion562_desactivada)
+			(cancion563_desactivada)
+			(cancion564_desactivada)
+			(cancion565_desactivada)
+			;******ORIENTALES_2
+			(cancion566_desactivada)
+			(cancion567_desactivada)
+			(cancion568_desactivada)
+			(cancion569_desactivada)
+			(cancion570_desactivada)
+			(cancion571_desactivada)
+			(cancion572_desactivada)
+			(cancion573_desactivada)
+			(cancion574_desactivada)
+			(cancion575_desactivada)
+			(cancion576_desactivada)
+			;******ORIENTALES_3
+			(cancion577_desactivada)
+			(cancion578_desactivada)
+			(cancion579_desactivada)
+			(cancion580_desactivada)
+			(cancion581_desactivada)
+			(cancion582_desactivada)
+			(cancion583_desactivada)
+			(cancion584_desactivada)
+			(cancion585_desactivada)
+			(cancion586_desactivada)
+			(cancion587_desactivada)
+			;******CLASICA
+			(cancion588_desactivada)
+			(cancion589_desactivada)
+			(cancion590_desactivada)
+			(cancion591_desactivada)
+			(cancion592_desactivada)
+			(cancion593_desactivada)
+			(cancion594_desactivada)
+			(cancion595_desactivada)
+			(cancion596_desactivada)
+			(cancion597_desactivada)
+			(cancion598_desactivada)
+			(cancion599_desactivada)
+			(cancion600_desactivada)
+			(cancion601_desactivada)
+			(cancion602_desactivada)
+			(cancion603_desactivada)
+			(cancion604_desactivada)
+			(cancion605_desactivada)
+			(cancion606_desactivada)
+			(cancion607_desactivada)
+			(cancion608_desactivada)
+			(cancion609_desactivada)
+			(cancion610_desactivada)
+			(cancion611_desactivada)
+			;******JAZZ
+			(cancion612_desactivada)
+			(cancion613_desactivada)
+			(cancion614_desactivada)
+			(cancion615_desactivada)
+			(cancion616_desactivada)
+			(cancion617_desactivada)
+			(cancion618_desactivada)
+			(cancion619_desactivada)
+			(cancion620_desactivada)
+			(cancion621_desactivada)
+			(cancion622_desactivada)
+			(cancion623_desactivada)
+			(cancion624_desactivada)
+			(cancion625_desactivada)
+			(cancion626_desactivada)
+			(cancion627_desactivada)
+			(cancion628_desactivada)
+			(cancion629_desactivada)
+			(cancion630_desactivada)
+			(cancion631_desactivada)
+			(cancion632_desactivada)
+			(cancion633_desactivada)
+			(cancion634_desactivada)
+			(cancion635_desactivada)
+			(cancion636_desactivada)
+			(cancion637_desactivada)
+			(cancion638_desactivada)
+			(cancion639_desactivada)
+			(cancion640_desactivada)
+			(cancion641_desactivada)
+			(cancion642_desactivada)
+			;******BALADAS
+			(cancion643_desactivada)
+			(cancion644_desactivada)
+			(cancion645_desactivada)
+			(cancion646_desactivada)
+			(cancion647_desactivada)
+			(cancion648_desactivada)
+			(cancion649_desactivada)
+			(cancion650_desactivada)
+			(cancion651_desactivada)
+			(cancion652_desactivada)
+			(cancion653_desactivada)
+			(cancion654_desactivada)
+			(cancion655_desactivada)
+			(cancion656_desactivada)
+			(cancion657_desactivada)
+			(cancion658_desactivada)
+			(cancion659_desactivada)
+			(cancion660_desactivada)
+			(cancion661_desactivada)
+
+
 			
 )			
 
@@ -10804,9 +10952,2742 @@
 )
 
 
+;*********************************************************NEW AGE******************************************************
+;*********************************************************NEW AGE******************************************************
 
 
 
-;*********************************************************HIP HOP******************************************************
-;*********************************************************HIP HOP******************************************************
+(defrule cancion523
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion523_desactivada)
+	(dimensiones (dimension "calmado_si"))
+	(cultura_occidental)
+	(animo_pensativo)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Voyager - Catherine Duc")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion524
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion524_desactivada)
+	(dimensiones (dimension "calmado_si"))
+	(cultura_occidental)
+	(animo_pensativo)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: When - AeTopus")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion525
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion525_desactivada)
+	(dimensiones (dimension "calmado_si"))
+	(cultura_occidental)
+	(animo_pensativo)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Flute Flight - Sherry Finzer and Mark Holland")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion526
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion526_desactivada)
+	(dimensiones (dimension "calmado_si"))
+	(cultura_occidental)
+	(animo_pensativo)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Grace - Paul Avgerinos")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion527
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion527_desactivada)
+	(dimensiones (dimension "calmado_si"))
+	(cultura_occidental)
+	(animo_pensativo)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Mississippi - Eric Tingstad")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion528
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion528_desactivada)
+	(dimensiones (dimension "calmado_si"))
+	(cultura_occidental)
+	(animo_pensativo)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: March of the Timeshifters - Sensitive Chaos")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion529
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion529_desactivada)
+	(dimensiones (dimension "calmado_si"))
+	(cultura_occidental)
+	(animo_pensativo)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Time and Tides - Yu Ya Huang")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion530
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion530_desactivada)
+	(dimensiones (dimension "calmado_si"))
+	(cultura_occidental)
+	(animo_pensativo)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Fire In The Rainstorm - Kori Linae Carothers")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion531
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion531_desactivada)
+	(dimensiones (dimension "calmado_si"))
+	(cultura_occidental)
+	(animo_pensativo)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Asia Beauty - Ron Korb")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion532
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion532_desactivada)
+	(dimensiones (dimension "calmado_si"))
+	(cultura_occidental)
+	(animo_pensativo)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Treasures of Peace - Stanton Lanier")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion533
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion533_desactivada)
+	(dimensiones (dimension "calmado_si"))
+	(cultura_occidental)
+	(animo_pensativo)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Lake Song - Greg Maroney")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion534
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion534_desactivada)
+	(dimensiones (dimension "calmado_si"))
+	(cultura_occidental)
+	(animo_pensativo)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Daydream Alley - Holland Phillips")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion535
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion535_desactivada)
+	(dimensiones (dimension "calmado_si"))
+	(cultura_occidental)
+	(animo_pensativo)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: O Bosque Encantado - Pachelbel")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion536
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion536_desactivada)
+	(dimensiones (dimension "calmado_si"))
+	(cultura_occidental)
+	(animo_pensativo)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: The Rain Song - Wonderful New Age Music")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion537
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion537_desactivada)
+	(dimensiones (dimension "calmado_si"))
+	(cultura_occidental)
+	(animo_pensativo)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Dancing and Relaxing - The Beach Paradise")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion538
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion538_desactivada)
+	(dimensiones (dimension "calmado_si"))
+	(cultura_occidental)
+	(animo_pensativo)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Procession of the king - Wonderful Soundtrack Music")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion539
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion539_desactivada)
+	(dimensiones (dimension "calmado_si"))
+	(cultura_occidental)
+	(animo_pensativo)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Evening Fall - The Softness of the Harp Music")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion540
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion540_desactivada)
+	(dimensiones (dimension "calmado_si"))
+	(cultura_occidental)
+	(animo_pensativo)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Escrito nas Estrelas e nos Números - Luiz Gasparetto")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion541
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion541_desactivada)
+	(dimensiones (dimension "calmado_si"))
+	(cultura_occidental)
+	(animo_pensativo)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Never Ending Dream - Fascinating")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion542
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion542_desactivada)
+	(dimensiones (dimension "calmado_si"))
+	(cultura_occidental)
+	(animo_pensativo)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Yanni - Whispers In The Dark")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion543
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion543_desactivada)
+	(dimensiones (dimension "calmado_si"))
+	(cultura_occidental)
+	(animo_pensativo)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Aretes - A magic New Age")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+;*********************************************************MERENGUE******************************************************
+;*********************************************************MERENGUE******************************************************
+
+
+
+(defrule cancion544
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion544_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_occidental)
+	(animo_alegre)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Te compro tu novia – Ramón Orlando")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion545
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion545_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_occidental)
+	(animo_alegre)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Cuando estás con él – Wilfrido Vargas")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion546
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion546_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_occidental)
+	(animo_alegre)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Compréndeme – Hermanos Rosario")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion547
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion547_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_occidental)
+	(animo_alegre)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Comején – Wilfrido Vargas")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion548
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion548_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_occidental)
+	(animo_alegre)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Colee – The New York Band")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion549
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion549_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_occidental)
+	(animo_alegre)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Colé – New York Band")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion550
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion550_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_occidental)
+	(animo_alegre)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Cobarde – Rubby Perez")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion551
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion551_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_occidental)
+	(animo_alegre)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Candela pa lo pie – Aramis Camilo")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion552
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion552_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_occidental)
+	(animo_alegre)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Cama y mesa – Fernandito Villalona")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion553
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion553_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_occidental)
+	(animo_alegre)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Cada día te amo más – New York Band")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion554
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion554_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_occidental)
+	(animo_alegre)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Solo palabras – Los Melodicos")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion555
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion555_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_occidental)
+	(animo_alegre)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Buscando tus besos – Rubby Péres")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion556
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion556_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_occidental)
+	(animo_alegre)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Blanca – Jossie Estevan")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion557
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion557_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_occidental)
+	(animo_alegre)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Besos Callejeros – Las Chicas De Can")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion558
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion558_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_occidental)
+	(animo_alegre)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Bachata Merengue – Wilfrido Vargas")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion559
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion559_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_occidental)
+	(animo_alegre)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Una fotografia – Bonny Cepeda")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion560
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion560_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_occidental)
+	(animo_alegre)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Ay mujer – Juan Luis Guerra")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion561
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion561_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_occidental)
+	(animo_alegre)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Ay doctor – Bonny Cepeda")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion562
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion562_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_occidental)
+	(animo_alegre)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Ay ay cariño – Roberto Antonio")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion563
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion563_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_occidental)
+	(animo_alegre)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Atrevida – Wilfrido Vargas")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion564
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion564_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_occidental)
+	(animo_alegre)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Asesina – Bonny Cepeda")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion565
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion565_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_occidental)
+	(animo_alegre)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Volvere – Wilfrido Vargas")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+;*********************************************************ORIENTALES_2******************************************************
+;*********************************************************ORIENTALES_2******************************************************
+
+
+(defrule cancion566
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion566_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_oriental)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: shí ye dianv bàn -  jí dianv zhòng le")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion567
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion567_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_oriental)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: mav líng shuv -  cháng wong")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion568
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion568_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_oriental)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: wov yào maiv -  pí jiuv")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion569
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion569_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_oriental)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: bú shì -  qíng")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion570
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion570_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_oriental)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: yì baiv wàn -  puv to-ng hùa / hàn yuv")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion571
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion571_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_oriental)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: niú roù - yú")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion572
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion572_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_oriental)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: sheng- rì - san yùe")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion573
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion573_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_oriental)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: xiv shouv jian - xing- qi- wuv")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion574
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion574_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_oriental)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: cài -  chu jìng")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion575
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion575_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_oriental)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: shí bav -  zhe duo- shaov qián")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion576
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion576_desactivada)
+	(dimensiones (dimension "fiestero_si"))
+	(cultura_oriental)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: bù haov -  xing qi")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+;*********************************************************ORIENTALES_3******************************************************
+;*********************************************************ORIENTALES_3******************************************************
+
+
+(defrule cancion577
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion577_desactivada)
+	(dimensiones (dimension "urbano_si"))
+	(cultura_oriental)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: niú roù - yú")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion578
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion578_desactivada)
+	(dimensiones (dimension "urbano_si"))
+	(cultura_oriental)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: sheng- rì - san yùe")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion579
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion579_desactivada)
+	(dimensiones (dimension "urbano_si"))
+	(cultura_oriental)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: xiv shouv jian - xing- qi- wuv")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion580
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion580_desactivada)
+	(dimensiones (dimension "urbano_si"))
+	(cultura_oriental)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: cài -  chu jìng")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion581
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion581_desactivada)
+	(dimensiones (dimension "urbano_si"))
+	(cultura_oriental)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: shí bav -  zhe duo- shaov qián")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion582
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion582_desactivada)
+	(dimensiones (dimension "urbano_si"))
+	(cultura_oriental)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: bù haov -  xing qi")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion583
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion583_desactivada)
+	(dimensiones (dimension "urbano_si"))
+	(cultura_oriental)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: shí ye dianv bàn -  jí dianv zhòng le")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion584
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion584_desactivada)
+	(dimensiones (dimension "urbano_si"))
+	(cultura_oriental)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: mav líng shuv -  cháng wong")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion585
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion585_desactivada)
+	(dimensiones (dimension "urbano_si"))
+	(cultura_oriental)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: wov yào maiv -  pí jiuv")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion586
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion586_desactivada)
+	(dimensiones (dimension "urbano_si"))
+	(cultura_oriental)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: bú shì -  qíng")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion587
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion587_desactivada)
+	(dimensiones (dimension "urbano_si"))
+	(cultura_oriental)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: yì baiv wàn -  puv to-ng hùa / hàn yuv")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+
+
+;*********************************************************CLASICA******************************************************
+;*********************************************************CLASICA******************************************************
+
+
+
+(defrule cancion588
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion588_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Las bodas de Figaro - Sibelius")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion589
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion589_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: I Gioni - Einaudi")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion590
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion590_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Carmen - Bizet")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion591
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion591_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Cantique de Jean Racine - Faure")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion592
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion592_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Suite Bergamasque - Debussy")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion593
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion593_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Caballería rusticana - Bruch")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion594
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion594_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Canon en re mayor - Pachelbel")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion595
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion595_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Concierto para clarinete - Rachamaniov")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion596
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion596_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Sinfonía n. 9 - Dvorak")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion597
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion597_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: El mesías - Tchaikovsky")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion598
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion598_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Concierto para violonchelo - Williams Vaughan")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion599
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion599_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Los planetas, opera - Holst")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion600
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion600_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Caballería en re mayor - Barber")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion601
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion601_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Réquiem - Mozart")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion602
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion602_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Las cuatro estaciones - Vivaldi")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion603
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion603_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Adagio para cuerda - Jenkins")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion604
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion604_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Finlandia, op. 26 - Sibelius")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion605
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion605_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Concierto para violonchelo, op. 85 (1919) - Elgar")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion606
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion606_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Capriccio in G - Emmanuel Pahud")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion607
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion607_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: La finta scema, se spiegar potessi appiento - Emmanuel Pahud")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion608
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion608_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Adagio molto e cantabile - Abbado")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion609
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion609_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Molto vivace - Orchestra of the Age of Enlightenment")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion610
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion610_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Presto Allegro assai - Andrea Perugi")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion611
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion611_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Adagio molto e cantabile - Abbado")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+;*********************************************************JAZZ******************************************************
+;*********************************************************JAZZ******************************************************
+
+
+
+(defrule cancion612
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion612_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: What A Wonderful World - Louis Armstrong")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion613
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion613_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Mercy, Mercy, Mercy - Cannonball Adderley")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion614
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion614_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: St. Thomas - Sonny Rollins")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion615
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion615_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Autumn Leaves Cannonball - Adderley")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion616
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion616_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Waltz For Debby - Bill Evans")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion617
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion617_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Flamenco Sketches - Miles Davis")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion618
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion618_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Naima - John Coltrane")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion619
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion619_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Blue In Green - Miles Davis")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion620
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion620_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Spain - Chick Corea")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion621
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion621_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Song For My Father - Horace Silver")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion622
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion622_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Body And Soul - Coleman Hawkins")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion623
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion623_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: My Funny Valentine - Chet Baker")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion624
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion624_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Cantaloupe Island - Herbie Hancock")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion625
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion625_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: God Bless The Child - Billie Holiday")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion626
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion626_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: West End Blues - Louis Armstrong")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion627
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion627_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Stolen Moments - Oliver Nelson")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion628
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion628_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Goodbye Pork Pie Hat - Charles Mingus")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion629
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion629_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Blue Rondo a la Turk - Dave Brubeck")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion630
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion630_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Giant Steps - John Coltrane")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion631
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion631_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: A Night in Tunisia - Dizzy Gillespie")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion632
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion632_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Strange Fruit - Billie Holiday")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion633
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion633_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Sing, Sing, Sing  -Benny Goodman")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion634
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion634_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: The Girl From Ipanema - Stan Getz & Astrud Gilberto")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion635
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion635_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Birdland - Weather Report")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion636
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion636_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: All Blues - Miles Davis")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion637
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion637_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: A Love Supreme (Acknowledgment) - John Coltrane")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion638
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion638_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: My Favorite Things - John Coltrane")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion639
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion639_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Round Midnight - The lonious Monk")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion640
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion640_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Take The A Train - Duke Ellington")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion641
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion641_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: So What Miles - Davis")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion642
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion642_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Take Five - Dave Brubeck")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+;*********************************************************BALADAS******************************************************
+;*********************************************************BALADAS******************************************************
+
+
+
+(defrule cancion643
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion643_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Tu - Noelia")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion644
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion644_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Bendita tu luz - Mana")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion645
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion645_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Algo mas- La Quinta Estacion")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion646
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion646_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: La playa - La oreja de Van Gogh")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion647
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion647_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Despidete - Ella baila sola")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion648
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion648_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Subidón - Fey")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion649
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion649_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Y estaba contentísimo - Tiziano Ferro")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion650
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion650_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Tu nombre - Julieta Venegas y Coty Sorokin")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion651
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion651_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Acompañame a estar solo - Ricardo Arjona")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion652
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion652_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Quizas - Paulina Rubio")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion653
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion653_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Es tu amor - Thalia")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion654
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion654_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Escapar - Moby y Amaral")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion655
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion655_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Si tu no vuelves - Chetes y Amaral")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion656
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion656_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Te necesito - La ley y Amaral")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion657
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion657_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Puedo Jurar - Lena")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion658
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion658_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Y tu te vas - Chayanne")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion659
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion659_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: El amor de mi vida - Ricky Martin")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion660
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion660_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Crimenes Perfectos - de Andres Calamaro")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
+(defrule cancion661
+	(declare (salience 4001))
+	?np <- (no_pausa)
+	?x <- (cancion661_desactivada)
+	(or
+		(and
+			(dimensiones (dimension "clasico_si"))
+			(cultura_occidental)
+			(animo_pensativo)
+		)
+		(and
+			(dimensiones (dimension "calmado_si"))
+			(cultura_occidental)
+			(animo_triste)
+		)
+	)
+=>
+	(store RESPUESTA "La canción recomendada para usted es: Antologia - Shakira")
+	(store NUMERO_FACT_CANCION ?x)
+	(retract ?np)
+)
+
+
+
 
