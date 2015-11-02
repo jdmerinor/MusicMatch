@@ -3,7 +3,10 @@ package gestorBD;
 import Modelo.Pregunta;
 import Modelo.Recomendacion;
 import Modelo.Usuario;
-import java.util.Iterator;
+import java.awt.Desktop;
+import java.io.IOException;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.LinkedList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -16,7 +19,6 @@ public class Controlador {
     private static Context contexto;        //Es el ambito global de la consola de CLIPS
     public static Usuario esteUsuario;      //Es como la cookie que me permite saber la persona que está logueada en el momento
     public static LinkedList<Usuario> listaDeUsuarios = new LinkedList(); //Usuarios cargados desde el XML
-    
 
     //Métodos
     public static void inicializarClips() {
@@ -160,8 +162,29 @@ public class Controlador {
     }
 
     public static void guardarCalificacion() {
-        if (Recomendacion.calificacion < 2.5) { //No volver a recomendar
+        if (Recomendacion.calificacion == null) {
+            esteUsuario.retracts.add("(retract " + Recomendacion.posicionFactDesactivado + ")");
+        } else if (Recomendacion.calificacion < 2.5) {
             esteUsuario.retracts.add("(retract " + Recomendacion.posicionFactDesactivado + ")");
         }
+
+    }
+
+    public static void abrirPaginaWeb(String urlString) {
+        try {
+            Desktop.getDesktop().browse(new URL(urlString).toURI());
+        } catch (URISyntaxException | IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void reiniciarSistema() {
+        clips = new Rete(); //Es como la clase patrona como si fuera la consola de CLIPS
+        contexto = null;        //Es el ambito global de la consola de CLIPS
+        esteUsuario = null;      //Es como la cookie que me permite saber la persona que está logueada en el momento
+        listaDeUsuarios = new LinkedList(); //Usuarios cargados desde el XML
+        Recomendacion.cancion = "No se encontró ninguna recomendación para usted.";
+        Recomendacion.posicionFactDesactivado = null;
+        Recomendacion.calificacion = null;
     }
 }

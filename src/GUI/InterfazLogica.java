@@ -4,6 +4,7 @@ package GUI;
 import LogicaDifusa.LogicaDifusa;
 import Modelo.Recomendacion;
 import gestorBD.Controlador;
+import java.awt.Toolkit;
 
 
 public class InterfazLogica extends javax.swing.JFrame {
@@ -43,6 +44,7 @@ public class InterfazLogica extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Calificacion de la recomendación");
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("../GUI/img/logo32.png")));
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Calificación de la recomendación"));
         jPanel2.setLayout(new java.awt.GridLayout(6, 1, 0, 3));

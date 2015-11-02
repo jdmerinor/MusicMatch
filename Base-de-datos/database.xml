@@ -76,5 +76,911 @@
     </void>
    </object>
   </void>
+  <void method="add">
+   <object class="Modelo.Usuario" id="Usuario1">
+    <void class="Modelo.Usuario" method="getField">
+     <string>nombreUsuario</string>
+     <void method="set">
+      <object idref="Usuario1"/>
+      <string>juandimr</string>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>hechos</string>
+     <void method="set">
+      <object idref="Usuario1"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(assert (cultura_occidental))</string>
+       </void>
+       <void method="add">
+        <string>(assert (edad_joven))</string>
+       </void>
+       <void method="add">
+        <string>(assert (musica_moderna))</string>
+       </void>
+       <void method="add">
+        <string>(assert (parque_si))</string>
+       </void>
+       <void method="add">
+        <string>(assert (casa_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (discoteca_si))</string>
+       </void>
+       <void method="add">
+        <string>(assert (fines_si))</string>
+       </void>
+       <void method="add">
+        <string>(assert (ritmo_rapida))</string>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>retracts</string>
+     <void method="set">
+      <object idref="Usuario1"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(retract 6)</string>
+       </void>
+       <void method="add">
+        <string>(retract 13)</string>
+       </void>
+       <void method="add">
+        <string>(retract 12)</string>
+       </void>
+       <void method="add">
+        <string>(retract 11)</string>
+       </void>
+       <void method="add">
+        <string>(retract 10)</string>
+       </void>
+       <void method="add">
+        <string>(retract 9)</string>
+       </void>
+       <void method="add">
+        <string>(retract 8)</string>
+       </void>
+       <void method="add">
+        <string>(retract 7)</string>
+       </void>
+       <void method="add">
+        <string>(retract 488)</string>
+       </void>
+       <void method="add">
+        <string>(retract 409)</string>
+       </void>
+       <void method="add">
+        <string>(retract 408)</string>
+       </void>
+       <void method="add">
+        <string>(retract 487)</string>
+       </void>
+       <void method="add">
+        <string>(retract 486)</string>
+       </void>
+       <void method="add">
+        <string>(retract 485)</string>
+       </void>
+       <void method="add">
+        <string>(retract 407)</string>
+       </void>
+      </object>
+     </void>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Modelo.Usuario" id="Usuario2">
+    <void class="Modelo.Usuario" method="getField">
+     <string>nombreUsuario</string>
+     <void method="set">
+      <object idref="Usuario2"/>
+      <string>pachito1</string>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>hechos</string>
+     <void method="set">
+      <object idref="Usuario2"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(assert (cultura_occidental))</string>
+       </void>
+       <void method="add">
+        <string>(assert (edad_joven))</string>
+       </void>
+       <void method="add">
+        <string>(assert (musica_moderna))</string>
+       </void>
+       <void method="add">
+        <string>(assert (parque_si))</string>
+       </void>
+       <void method="add">
+        <string>(assert (casa_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (discoteca_si))</string>
+       </void>
+       <void method="add">
+        <string>(assert (fines_si))</string>
+       </void>
+       <void method="add">
+        <string>(assert (ritmo_rapida))</string>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>retracts</string>
+     <void method="set">
+      <object idref="Usuario2"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(retract 6)</string>
+       </void>
+       <void method="add">
+        <string>(retract 13)</string>
+       </void>
+       <void method="add">
+        <string>(retract 12)</string>
+       </void>
+       <void method="add">
+        <string>(retract 11)</string>
+       </void>
+       <void method="add">
+        <string>(retract 10)</string>
+       </void>
+       <void method="add">
+        <string>(retract 9)</string>
+       </void>
+       <void method="add">
+        <string>(retract 8)</string>
+       </void>
+       <void method="add">
+        <string>(retract 7)</string>
+       </void>
+      </object>
+     </void>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Modelo.Usuario" id="Usuario3">
+    <void class="Modelo.Usuario" method="getField">
+     <string>nombreUsuario</string>
+     <void method="set">
+      <object idref="Usuario3"/>
+      <string>claudio</string>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>hechos</string>
+     <void method="set">
+      <object idref="Usuario3"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(assert (cultura_occidental))</string>
+       </void>
+       <void method="add">
+        <string>(assert (edad_joven))</string>
+       </void>
+       <void method="add">
+        <string>(assert (musica_moderna))</string>
+       </void>
+       <void method="add">
+        <string>(assert (parque_si))</string>
+       </void>
+       <void method="add">
+        <string>(assert (casa_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (discoteca_si))</string>
+       </void>
+       <void method="add">
+        <string>(assert (fines_si))</string>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>retracts</string>
+     <void method="set">
+      <object idref="Usuario3"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(retract 6)</string>
+       </void>
+       <void method="add">
+        <string>(retract 13)</string>
+       </void>
+       <void method="add">
+        <string>(retract 12)</string>
+       </void>
+       <void method="add">
+        <string>(retract 11)</string>
+       </void>
+       <void method="add">
+        <string>(retract 10)</string>
+       </void>
+       <void method="add">
+        <string>(retract 9)</string>
+       </void>
+       <void method="add">
+        <string>(retract 8)</string>
+       </void>
+       <void method="add">
+        <string>(retract 64)</string>
+       </void>
+      </object>
+     </void>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Modelo.Usuario" id="Usuario4">
+    <void class="Modelo.Usuario" method="getField">
+     <string>nombreUsuario</string>
+     <void method="set">
+      <object idref="Usuario4"/>
+      <string>chino</string>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>hechos</string>
+     <void method="set">
+      <object idref="Usuario4"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(assert (cultura_oriental))</string>
+       </void>
+       <void method="add">
+        <string>(assert (edad_joven))</string>
+       </void>
+       <void method="add">
+        <string>(assert (musica_antigua))</string>
+       </void>
+       <void method="add">
+        <string>(assert (parque_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (casa_si))</string>
+       </void>
+       <void method="add">
+        <string>(assert (discoteca_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (fines_no))</string>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>retracts</string>
+     <void method="set">
+      <object idref="Usuario4"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(retract 6)</string>
+       </void>
+       <void method="add">
+        <string>(retract 13)</string>
+       </void>
+       <void method="add">
+        <string>(retract 12)</string>
+       </void>
+       <void method="add">
+        <string>(retract 11)</string>
+       </void>
+       <void method="add">
+        <string>(retract 10)</string>
+       </void>
+       <void method="add">
+        <string>(retract 9)</string>
+       </void>
+       <void method="add">
+        <string>(retract 8)</string>
+       </void>
+       <void method="add">
+        <string>(retract 106)</string>
+       </void>
+      </object>
+     </void>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Modelo.Usuario" id="Usuario5">
+    <void class="Modelo.Usuario" method="getField">
+     <string>nombreUsuario</string>
+     <void method="set">
+      <object idref="Usuario5"/>
+      <string>hola</string>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>hechos</string>
+     <void method="set">
+      <object idref="Usuario5"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(assert (cultura_occidental))</string>
+       </void>
+       <void method="add">
+        <string>(assert (edad_joven))</string>
+       </void>
+       <void method="add">
+        <string>(assert (musica_antigua))</string>
+       </void>
+       <void method="add">
+        <string>(assert (parque_si))</string>
+       </void>
+       <void method="add">
+        <string>(assert (casa_si))</string>
+       </void>
+       <void method="add">
+        <string>(assert (discoteca_si))</string>
+       </void>
+       <void method="add">
+        <string>(assert (fines_si))</string>
+       </void>
+       <void method="add">
+        <string>(assert (ritmo_lenta))</string>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>retracts</string>
+     <void method="set">
+      <object idref="Usuario5"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(retract 6)</string>
+       </void>
+       <void method="add">
+        <string>(retract 13)</string>
+       </void>
+       <void method="add">
+        <string>(retract 12)</string>
+       </void>
+       <void method="add">
+        <string>(retract 11)</string>
+       </void>
+       <void method="add">
+        <string>(retract 10)</string>
+       </void>
+       <void method="add">
+        <string>(retract 9)</string>
+       </void>
+       <void method="add">
+        <string>(retract 8)</string>
+       </void>
+       <void method="add">
+        <string>(retract 7)</string>
+       </void>
+      </object>
+     </void>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Modelo.Usuario" id="Usuario6">
+    <void class="Modelo.Usuario" method="getField">
+     <string>nombreUsuario</string>
+     <void method="set">
+      <object idref="Usuario6"/>
+      <string>ahol</string>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>hechos</string>
+     <void method="set">
+      <object idref="Usuario6"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(assert (cultura_oriental))</string>
+       </void>
+       <void method="add">
+        <string>(assert (edad_adulto))</string>
+       </void>
+       <void method="add">
+        <string>(assert (musica_moderna))</string>
+       </void>
+       <void method="add">
+        <string>(assert (parque_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (casa_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (discoteca_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (fines_no))</string>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>retracts</string>
+     <void method="set">
+      <object idref="Usuario6"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(retract 6)</string>
+       </void>
+       <void method="add">
+        <string>(retract 13)</string>
+       </void>
+       <void method="add">
+        <string>(retract 12)</string>
+       </void>
+       <void method="add">
+        <string>(retract 11)</string>
+       </void>
+       <void method="add">
+        <string>(retract 10)</string>
+       </void>
+       <void method="add">
+        <string>(retract 9)</string>
+       </void>
+       <void method="add">
+        <string>(retract 8)</string>
+       </void>
+       <void method="add">
+        <string>(retract 536)</string>
+       </void>
+      </object>
+     </void>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Modelo.Usuario" id="Usuario7">
+    <void class="Modelo.Usuario" method="getField">
+     <string>nombreUsuario</string>
+     <void method="set">
+      <object idref="Usuario7"/>
+      <string>asdf</string>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>hechos</string>
+     <void method="set">
+      <object idref="Usuario7"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(assert (cultura_occidental))</string>
+       </void>
+       <void method="add">
+        <string>(assert (edad_adulto))</string>
+       </void>
+       <void method="add">
+        <string>(assert (musica_moderna))</string>
+       </void>
+       <void method="add">
+        <string>(assert (parque_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (casa_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (discoteca_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (fines_si))</string>
+       </void>
+       <void method="add">
+        <string>(assert (ritmo_lenta))</string>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>retracts</string>
+     <void method="set">
+      <object idref="Usuario7"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(retract 6)</string>
+       </void>
+       <void method="add">
+        <string>(retract 13)</string>
+       </void>
+       <void method="add">
+        <string>(retract 12)</string>
+       </void>
+       <void method="add">
+        <string>(retract 11)</string>
+       </void>
+       <void method="add">
+        <string>(retract 10)</string>
+       </void>
+       <void method="add">
+        <string>(retract 9)</string>
+       </void>
+       <void method="add">
+        <string>(retract 8)</string>
+       </void>
+       <void method="add">
+        <string>(retract 7)</string>
+       </void>
+      </object>
+     </void>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Modelo.Usuario" id="Usuario8">
+    <void class="Modelo.Usuario" method="getField">
+     <string>nombreUsuario</string>
+     <void method="set">
+      <object idref="Usuario8"/>
+      <string>asdfsd</string>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>hechos</string>
+     <void method="set">
+      <object idref="Usuario8"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(assert (cultura_occidental))</string>
+       </void>
+       <void method="add">
+        <string>(assert (edad_adulto))</string>
+       </void>
+       <void method="add">
+        <string>(assert (musica_moderna))</string>
+       </void>
+       <void method="add">
+        <string>(assert (parque_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (casa_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (discoteca_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (fines_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (ritmo_lenta))</string>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>retracts</string>
+     <void method="set">
+      <object idref="Usuario8"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(retract 6)</string>
+       </void>
+       <void method="add">
+        <string>(retract 13)</string>
+       </void>
+       <void method="add">
+        <string>(retract 12)</string>
+       </void>
+       <void method="add">
+        <string>(retract 11)</string>
+       </void>
+       <void method="add">
+        <string>(retract 10)</string>
+       </void>
+       <void method="add">
+        <string>(retract 9)</string>
+       </void>
+       <void method="add">
+        <string>(retract 8)</string>
+       </void>
+       <void method="add">
+        <string>(retract 7)</string>
+       </void>
+      </object>
+     </void>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Modelo.Usuario" id="Usuario9">
+    <void class="Modelo.Usuario" method="getField">
+     <string>nombreUsuario</string>
+     <void method="set">
+      <object idref="Usuario9"/>
+      <string>fghdf</string>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>hechos</string>
+     <void method="set">
+      <object idref="Usuario9"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(assert (cultura_occidental))</string>
+       </void>
+       <void method="add">
+        <string>(assert (edad_joven))</string>
+       </void>
+       <void method="add">
+        <string>(assert (musica_moderna))</string>
+       </void>
+       <void method="add">
+        <string>(assert (parque_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (casa_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (discoteca_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (fines_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (ritmo_lenta))</string>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>retracts</string>
+     <void method="set">
+      <object idref="Usuario9"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(retract 6)</string>
+       </void>
+       <void method="add">
+        <string>(retract 13)</string>
+       </void>
+       <void method="add">
+        <string>(retract 12)</string>
+       </void>
+       <void method="add">
+        <string>(retract 11)</string>
+       </void>
+       <void method="add">
+        <string>(retract 10)</string>
+       </void>
+       <void method="add">
+        <string>(retract 9)</string>
+       </void>
+       <void method="add">
+        <string>(retract 8)</string>
+       </void>
+       <void method="add">
+        <string>(retract 7)</string>
+       </void>
+      </object>
+     </void>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Modelo.Usuario" id="Usuario10">
+    <void class="Modelo.Usuario" method="getField">
+     <string>nombreUsuario</string>
+     <void method="set">
+      <object idref="Usuario10"/>
+      <string>pachin</string>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>hechos</string>
+     <void method="set">
+      <object idref="Usuario10"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(assert (cultura_occidental))</string>
+       </void>
+       <void method="add">
+        <string>(assert (edad_adulto))</string>
+       </void>
+       <void method="add">
+        <string>(assert (musica_moderna))</string>
+       </void>
+       <void method="add">
+        <string>(assert (parque_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (casa_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (discoteca_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (fines_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (ritmo_rapida))</string>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>retracts</string>
+     <void method="set">
+      <object idref="Usuario10"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(retract 6)</string>
+       </void>
+       <void method="add">
+        <string>(retract 13)</string>
+       </void>
+       <void method="add">
+        <string>(retract 12)</string>
+       </void>
+       <void method="add">
+        <string>(retract 11)</string>
+       </void>
+       <void method="add">
+        <string>(retract 10)</string>
+       </void>
+       <void method="add">
+        <string>(retract 9)</string>
+       </void>
+       <void method="add">
+        <string>(retract 8)</string>
+       </void>
+       <void method="add">
+        <string>(retract 7)</string>
+       </void>
+       <void method="add">
+        <string>(retract 344)</string>
+       </void>
+      </object>
+     </void>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Modelo.Usuario" id="Usuario11">
+    <void class="Modelo.Usuario" method="getField">
+     <string>nombreUsuario</string>
+     <void method="set">
+      <object idref="Usuario11"/>
+      <string>juan</string>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>hechos</string>
+     <void method="set">
+      <object idref="Usuario11"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(assert (cultura_occidental))</string>
+       </void>
+       <void method="add">
+        <string>(assert (edad_joven))</string>
+       </void>
+       <void method="add">
+        <string>(assert (musica_moderna))</string>
+       </void>
+       <void method="add">
+        <string>(assert (parque_si))</string>
+       </void>
+       <void method="add">
+        <string>(assert (casa_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (discoteca_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (fines_si))</string>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>retracts</string>
+     <void method="set">
+      <object idref="Usuario11"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(retract 6)</string>
+       </void>
+       <void method="add">
+        <string>(retract 13)</string>
+       </void>
+       <void method="add">
+        <string>(retract 12)</string>
+       </void>
+       <void method="add">
+        <string>(retract 11)</string>
+       </void>
+       <void method="add">
+        <string>(retract 10)</string>
+       </void>
+       <void method="add">
+        <string>(retract 9)</string>
+       </void>
+       <void method="add">
+        <string>(retract 8)</string>
+       </void>
+      </object>
+     </void>
+    </void>
+   </object>
+  </void>
+  <void method="add">
+   <object class="Modelo.Usuario" id="Usuario12">
+    <void class="Modelo.Usuario" method="getField">
+     <string>nombreUsuario</string>
+     <void method="set">
+      <object idref="Usuario12"/>
+      <string>lis</string>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>hechos</string>
+     <void method="set">
+      <object idref="Usuario12"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(assert (cultura_occidental))</string>
+       </void>
+       <void method="add">
+        <string>(assert (edad_joven))</string>
+       </void>
+       <void method="add">
+        <string>(assert (musica_antigua))</string>
+       </void>
+       <void method="add">
+        <string>(assert (parque_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (casa_si))</string>
+       </void>
+       <void method="add">
+        <string>(assert (discoteca_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (fines_no))</string>
+       </void>
+      </object>
+     </void>
+    </void>
+    <void class="Modelo.Usuario" method="getField">
+     <string>retracts</string>
+     <void method="set">
+      <object idref="Usuario12"/>
+      <object class="java.util.LinkedList">
+       <void method="add">
+        <string>(retract 6)</string>
+       </void>
+       <void method="add">
+        <string>(retract 13)</string>
+       </void>
+       <void method="add">
+        <string>(retract 12)</string>
+       </void>
+       <void method="add">
+        <string>(retract 11)</string>
+       </void>
+       <void method="add">
+        <string>(retract 10)</string>
+       </void>
+       <void method="add">
+        <string>(retract 9)</string>
+       </void>
+       <void method="add">
+        <string>(retract 8)</string>
+       </void>
+       <void method="add">
+        <string>(retract 344)</string>
+       </void>
+      </object>
+     </void>
+    </void>
+   </object>
+  </void>
  </object>
 </java>

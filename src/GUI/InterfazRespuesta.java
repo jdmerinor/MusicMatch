@@ -3,6 +3,7 @@ package GUI;
 import Modelo.Pregunta;
 import Modelo.Recomendacion;
 import gestorBD.Controlador;
+import java.awt.Toolkit;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.JButton;
@@ -18,17 +19,19 @@ public class InterfazRespuesta extends javax.swing.JFrame {
         this.addWindowListener(new WindowAdapter() { //Cuando se vaya a cerrar el programa cierra la base de datos
             @Override
             public void windowClosing(WindowEvent we) {
+                if (!Recomendacion.cancion.equals("No se encontró ninguna recomendación para usted.")) {
+                    Controlador.guardarCalificacion();
+                }
                 Controlador.guardarXML();
             }
         });
         labelRespuesta.setText(Recomendacion.cancion);
-        if(Recomendacion.cancion.equals("No se encontró ninguna recomendación para usted.")){
-        botonEvaluar.setVisible(false);
+        if (Recomendacion.cancion.equals("No se encontró ninguna recomendación para usted.")) {
+            botonEvaluar.setVisible(false);
+            botonVerEnYoutube.setVisible(false);
         }
         repaint();
     }
-
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -44,12 +47,15 @@ public class InterfazRespuesta extends javax.swing.JFrame {
         labelRespuesta = new javax.swing.JLabel();
         panelRespuestas = new javax.swing.JPanel();
         botonEvaluar = new javax.swing.JButton();
+        botonVerEnYoutube = new javax.swing.JButton();
+        botonEmpezarDeNuevo = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         botonAyuda = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Music Match");
         setBackground(new java.awt.Color(0, 0, 0));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("../GUI/img/logo32.png")));
         setResizable(false);
 
         jPanel1.setMaximumSize(null);
@@ -69,6 +75,25 @@ public class InterfazRespuesta extends javax.swing.JFrame {
             }
         });
         panelRespuestas.add(botonEvaluar);
+
+        botonVerEnYoutube.setText("Ver en Youtube");
+        botonVerEnYoutube.setActionCommand("");
+        botonVerEnYoutube.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonVerEnYoutubeActionPerformed(evt);
+            }
+        });
+        panelRespuestas.add(botonVerEnYoutube);
+
+        botonEmpezarDeNuevo.setText("Volver a empezar");
+        botonEmpezarDeNuevo.setToolTipText("");
+        botonEmpezarDeNuevo.setActionCommand("");
+        botonEmpezarDeNuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonEmpezarDeNuevoActionPerformed(evt);
+            }
+        });
+        panelRespuestas.add(botonEmpezarDeNuevo);
 
         botonAyuda.setBackground(new java.awt.Color(253, 72, 57));
         botonAyuda.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
@@ -151,9 +176,28 @@ public class InterfazRespuesta extends javax.swing.JFrame {
         new InterfazLogica().setVisible(true);
     }//GEN-LAST:event_botonEvaluarActionPerformed
 
+    private void botonVerEnYoutubeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonVerEnYoutubeActionPerformed
+        String recomendacion = Recomendacion.cancion;
+        String nombreDeLaCancion = recomendacion.substring(recomendacion.lastIndexOf(':') + 1).replace(' ', '+');
+        Controlador.abrirPaginaWeb("https://www.youtube.com/results?search_query=" + nombreDeLaCancion);
+    }//GEN-LAST:event_botonVerEnYoutubeActionPerformed
+
+    private void botonEmpezarDeNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonEmpezarDeNuevoActionPerformed
+        dispose();
+        this.setVisible(false);
+        if (!Recomendacion.cancion.equals("No se encontró ninguna recomendación para usted.")) {
+            Controlador.guardarCalificacion();
+        }
+        Controlador.guardarXML();
+        Controlador.reiniciarSistema();
+        new Login().setVisible(true);
+    }//GEN-LAST:event_botonEmpezarDeNuevoActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton botonAyuda;
+    private javax.swing.JButton botonEmpezarDeNuevo;
     private javax.swing.JButton botonEvaluar;
+    private javax.swing.JButton botonVerEnYoutube;
     private javax.swing.JLabel jLabelLogo;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;

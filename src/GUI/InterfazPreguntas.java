@@ -2,13 +2,13 @@ package GUI;
 
 import Modelo.Pregunta;
 import gestorBD.Controlador;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
-import jess.JessHelper;
 
 public class InterfazPreguntas extends javax.swing.JFrame {
 
@@ -78,6 +78,7 @@ public class InterfazPreguntas extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Music Match");
         setBackground(new java.awt.Color(0, 0, 0));
+        setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("../GUI/img/logo32.png")));
         setResizable(false);
 
         jPanel1.setMaximumSize(null);
