@@ -33,7 +33,8 @@ public class InterfazPreguntas extends javax.swing.JFrame {
             panelRespuestas.removeAll();
             for (String opcion : preguntaMostrada.opcionesDeRespuesta) {
                 JButton boton = new JButton();
-                boton.setText(opcion);
+                String opcionParaMostrar = opcion.substring(0,1).toUpperCase() + opcion.substring(1);
+                boton.setText(opcionParaMostrar.replace("_", " "));
                 boton.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
@@ -75,7 +76,7 @@ public class InterfazPreguntas extends javax.swing.JFrame {
         botonAyuda = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("ExploraEs");
+        setTitle("Music Match");
         setBackground(new java.awt.Color(0, 0, 0));
         setResizable(false);
 

@@ -7,7 +7,7 @@
      <string>nombreUsuario</string>
      <void method="set">
       <object idref="Usuario0"/>
-      <string>pachitu</string>
+      <string>pachito</string>
      </void>
     </void>
     <void class="Modelo.Usuario" method="getField">
@@ -16,7 +16,28 @@
       <object idref="Usuario0"/>
       <object class="java.util.LinkedList">
        <void method="add">
-        <string>(assert (occiental_oriental))</string>
+        <string>(assert (edad_adulto))</string>
+       </void>
+       <void method="add">
+        <string>(assert (musica_antigua))</string>
+       </void>
+       <void method="add">
+        <string>(assert (parque_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (casa_si))</string>
+       </void>
+       <void method="add">
+        <string>(assert (discoteca_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (fines_no))</string>
+       </void>
+       <void method="add">
+        <string>(assert (ritmo_lenta))</string>
+       </void>
+       <void method="add">
+        <string>(assert (baile_no))</string>
        </void>
       </object>
      </void>
@@ -27,46 +48,28 @@
       <object idref="Usuario0"/>
       <object class="java.util.LinkedList">
        <void method="add">
-        <string>(retract 1)</string>
+        <string>(retract 12)</string>
        </void>
        <void method="add">
-        <string>(retract 3)</string>
-       </void>
-      </object>
-     </void>
-    </void>
-   </object>
-  </void>
-  <void method="add">
-   <object class="Modelo.Usuario" id="Usuario1">
-    <void class="Modelo.Usuario" method="getField">
-     <string>nombreUsuario</string>
-     <void method="set">
-      <object idref="Usuario1"/>
-      <string>pu</string>
-     </void>
-    </void>
-    <void class="Modelo.Usuario" method="getField">
-     <string>hechos</string>
-     <void method="set">
-      <object idref="Usuario1"/>
-      <object class="java.util.LinkedList">
-       <void method="add">
-        <string>(assert (occiental_oriental))</string>
-       </void>
-      </object>
-     </void>
-    </void>
-    <void class="Modelo.Usuario" method="getField">
-     <string>retracts</string>
-     <void method="set">
-      <object idref="Usuario1"/>
-      <object class="java.util.LinkedList">
-       <void method="add">
-        <string>(retract 1)</string>
+        <string>(retract 11)</string>
        </void>
        <void method="add">
-        <string>(retract 3)</string>
+        <string>(retract 10)</string>
+       </void>
+       <void method="add">
+        <string>(retract 9)</string>
+       </void>
+       <void method="add">
+        <string>(retract 8)</string>
+       </void>
+       <void method="add">
+        <string>(retract 7)</string>
+       </void>
+       <void method="add">
+        <string>(retract 6)</string>
+       </void>
+       <void method="add">
+        <string>(retract 5)</string>
        </void>
       </object>
      </void>

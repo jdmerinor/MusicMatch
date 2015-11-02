@@ -15,12 +15,10 @@ public class Controlador {
     private static Rete clips = new Rete(); //Es como la clase patrona como si fuera la consola de CLIPS
     private static Context contexto;        //Es el ambito global de la consola de CLIPS
     public static Usuario esteUsuario;      //Es como la cookie que me permite saber la persona que está logueada en el momento
-    
-    public static Recomendacion respuesta;
-//Métodos
-    public static LinkedList<Usuario> listaDeUsuarios = new LinkedList();
+    public static LinkedList<Usuario> listaDeUsuarios = new LinkedList(); //Usuarios cargados desde el XML
     
 
+    //Métodos
     public static void inicializarClips() {
         try {
             contexto = clips.getGlobalContext();
@@ -61,6 +59,9 @@ public class Controlador {
                     System.out.println("Se va a hacer el assert: " + esteAssert);
                     clips.executeCommand(esteAssert);
                 }
+                clips.run();
+                clips.executeCommand("(facts)");
+                clips.run();
             } else {//
                 esteUsuario = new Usuario(nombreUsuario);
                 listaDeUsuarios.add(esteUsuario);
@@ -106,14 +107,14 @@ public class Controlador {
 
                 String ayuda = clips.fetch("TEXTO_AYUDA").toString().replace("\"", "");
                 estaPregunta.textoAyuda = ayuda;
-                
+
                 String tipoPregunta = clips.fetch("TIPO_PREGUNTA").toString().replace("\"", "");
                 estaPregunta.tipoDePregunta = tipoPregunta;
 
                 return estaPregunta;
-            }else{//Si ya hay una cancion
-                respuesta.cancion = valorRespuesta.toString().replace("\"", "");
-                respuesta.posicionFactDesactivado = clips.fetch("NUMERO_FACT_CANCION").toString().replace("<Fact-", "").replace(">", "");
+            } else {//Si ya hay una cancion
+                Recomendacion.cancion = valorRespuesta.toString().replace("\"", "");
+                Recomendacion.posicionFactDesactivado = clips.fetch("NUMERO_FACT_CANCION").toString().replace("<Fact-", "").replace(">", "");
                 return null;
             }
         } catch (JessException ex) {
@@ -133,6 +134,7 @@ public class Controlador {
             esteUsuario.hechos.add("(assert (" + pregunta.prefijoAssertRespuesta + pregunta.respuesta + "))");
             clips.executeCommand("(assert (" + pregunta.prefijoAssertRespuesta + pregunta.respuesta + "))");
             clips.executeCommand("(assert (no_pausa))");
+            clips.run();
             clips.executeCommand("(facts)");
             clips.run();
         } catch (JessException ex) {
@@ -149,6 +151,7 @@ public class Controlador {
 
             clips.executeCommand("(assert (" + pregunta.prefijoAssertRespuesta + pregunta.respuesta + "))");
             clips.executeCommand("(assert (no_pausa))");
+            clips.run();
             clips.executeCommand("(facts)");
             clips.run();
         } catch (JessException ex) {
@@ -157,8 +160,8 @@ public class Controlador {
     }
 
     public static void guardarCalificacion() {
-        if(Recomendacion.calificacion < 2.5){ //No volver a recomendar
-            esteUsuario.retracts.add("(retract "+ Recomendacion.posicionFactDesactivado +")");
+        if (Recomendacion.calificacion < 2.5) { //No volver a recomendar
+            esteUsuario.retracts.add("(retract " + Recomendacion.posicionFactDesactivado + ")");
         }
     }
 }

@@ -48,7 +48,7 @@ public class InterfazRespuesta extends javax.swing.JFrame {
         botonAyuda = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("ExploraEs");
+        setTitle("Music Match");
         setBackground(new java.awt.Color(0, 0, 0));
         setResizable(false);
 

@@ -42,6 +42,7 @@ public class InterfazLogica extends javax.swing.JFrame {
         botonCalificar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Calificacion de la recomendación");
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Calificación de la recomendación"));
         jPanel2.setLayout(new java.awt.GridLayout(6, 1, 0, 3));
@@ -136,6 +137,7 @@ public class InterfazLogica extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonCalificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCalificarActionPerformed
